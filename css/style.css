@@ -562,7 +562,7 @@ img {
     font-size: 1rem;
     font-weight: 100;
     position: absolute;
-    left: 70%;
+    left: 75%;
   }
 
   .service .container .service-content-grid {
@@ -605,6 +605,11 @@ img {
     justify-content: center;
     align-items: center;
     margin-right: 35px;
+  }
+
+  .service .container .service-grid .card .card-text {
+    font-size: 12px;
+    margin-bottom: 10px;
   }
 
   .main-news-card {
