@@ -34,7 +34,7 @@ img {
 /* Navbar Section */
 .navbar {
   background: #fff;
-  padding: 20px 0;
+  padding: 10px 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
@@ -81,6 +81,58 @@ img {
   width: 70%;
 }
 
+.navbar .container .main-menu .dropdown {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 300px;
+  top: 100%;
+  left: 0;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  border-radius: 10px;
+  padding: 0 0 0 10px;
+}
+
+/* .navbar .container .main-menu .dropdown li {
+  border-bottom: 1px solid #eee;
+} */
+
+.navbar .container .main-menu .dropdown li:last-child {
+  border-bottom: none;
+}
+
+.navbar .container .main-menu .dropdown li a {
+  color: #333;
+  padding: 8px;
+  text-decoration: none;
+  display: block;
+  font-size: medium;
+}
+
+.navbar .container .main-menu .nav-item:hover .dropdown {
+  display: block;
+}
+
+.navbar .container .main-menu .nav-item {
+  position: relative;
+}
+
+.navbar .container .main-menu .nav-item a {
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+.navbar .container .main-menu .nav-item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  padding: 8px;
+}
+
 /* Hero Section */
 .hero {
   background: url("/assets/banner.jpg") no-repeat center center/cover;
@@ -120,9 +172,30 @@ img {
   grid-template-columns: repeat(4, 1fr);
 }
 
-.service .container .service-grid .card-text {
-  padding: 10px 15px;
-  display: none;
+.service .container .service-grid .card .card-img {
+  margin-bottom: 10px;
+  border-radius: 8px;
+  transition: transform 1s ease;
+  position: relative;
+  text-align: center;
+}
+
+.service .container .service-grid .card p {
+  position: absolute;
+  top: 70%;
+  left: 25%;
+  color: #fff;
+  transition: transform 1s ease;
+  cursor: pointer;
+}
+
+.service .container .service-grid .card .card-img:hover {
+  transform: scale(1.1);
+}
+
+.service .container .service-grid .card .card-text {
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 .service .container .service-heading .service-border {
@@ -319,6 +392,7 @@ img {
   color: #000;
   border-radius: 10px;
   padding: 20px;
+  position: relative;
 }
 
 /* Buttons */
@@ -520,6 +594,19 @@ img {
 }
 
 @media (max-width: 670px) {
+  .hero {
+    background: url("/assets/banner.jpg") no-repeat center center/cover;
+    height: 150px;
+  }
+
+  .service .container .service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin-right: 35px;
+  }
+
   .main-news-card {
     background: #ccc;
     padding: 1rem;
@@ -542,6 +629,14 @@ img {
   }
 
   .footer .footer-bottom p {
+    font-size: small;
+  }
+
+  .footer .container .footer-links ul li a {
+    font-size: smaller;
+  }
+
+  .footer .container .footer-links h4 {
     font-size: small;
   }
 
