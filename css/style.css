@@ -448,7 +448,6 @@ img {
   font-size: 1.8rem;
   line-height: 1.4;
   font-weight: normal;
-  margin: 30px 0 20px;
 }
 
 .text-md {
@@ -479,6 +478,12 @@ img {
   background: var(--light-color);
   color: #333;
 }
+
+.bg-grey {
+  background: #333;
+  color: #fff;
+}
+
 .bg-dark {
   background: var(--dark-color);
   color: #fff;
@@ -504,6 +509,59 @@ img {
   height: 3px;
   background: #333;
   margin: 6px 0;
+}
+
+/* Mobile Menu */
+.navbar .mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  z-index: 100;
+  background: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+}
+
+.navbar .mobile-menu.active {
+  right: 0;
+}
+
+.navbar .mobile-menu .mobile-category {
+  position: relative;
+}
+
+.navbar .mobile-menu .mobile-category ul {
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-content: left;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .mobile-menu .mobile-category ul li {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .mobile-menu .mobile-category ul li {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .mobile-menu .mobile-category ul a {
+  font-size: 0.7rem;
+}
+
+.navbar .mobile-menu .mobile-category ul a {
+  margin-left: 20px;
+  padding: 4px 0;
+}
+
+.navbar .mobile-menu .mobile-category ul h3 {
+  margin-left: 20px;
+  padding: 4px 0;
 }
 
 /* Media Queries */
